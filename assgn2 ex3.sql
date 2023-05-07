@@ -26,8 +26,10 @@ city varchar(30) not null,commsion float not null);
 (5003,'Lauson Hen','San Jose',0.12);
 select * from salesman;
 
-select c.cust_name,c.city,c.grade,
-s.salesman_id,s.city from customer c 
-inner join salesman s on
-c.salesman_id = s.salesman_id where c.grade<100
+select c.cust_name,c.city,c.grade,s.salesman_id,s.city 
+from customer c 
+inner join 
+salesman s on
+c.salesman_id = s.salesman_id 
+where c.grade<100
 order by customer_id asc;
